@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>シンプルコンテンツ</value>
+    </caseValues>
+    <fields>
+        <label><!-- 左コンテンツ --></label>
+        <name>ContentLeft__c</name>
+    </fields>
+    <fields>
+        <label><!-- 右コンテンツ --></label>
+        <name>ContentRight__c</name>
+    </fields>
+</CustomObjectTranslation>

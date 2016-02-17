@@ -1,0 +1,50 @@
+<aura:component access="global" controller="SimpleContentBoxController" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+    <ltng:require styles="/resource/SimpleContentBox/css/bootstrap.css?__NOCACHE__" afterScriptsLoaded="{!c.doInit}"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="content" type="SMPCNT__SimpleContent__c"/>
+    <div class="ui-widget simplecontentbootstrap center-block">
+        <div class="form-horizontal center-block" style="max-width:90%">
+            <aura:renderIf isTrue="{!v.recordId==''}">
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-8 alert alert-danger" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    レコードIDを指定してください。
+                </div>
+            </div>
+            </aura:renderIf>
+            <aura:if isTrue="{!v.content.SMPCNT__ContentDispNone__c}">
+            <aura:set attribute="else">
+            <aura:if isTrue="{!v.content.SMPCNT__ContentDispAll__c}">
+            <div class="form-group">
+                <div class="col-sm-6">
+                    <ui:outputRichText value="{!v.content.SMPCNT__ContentLeft__c}"/>
+                </div>
+                <div class="col-sm-6">
+                    <ui:outputRichText value="{!v.content.SMPCNT__ContentRight__c}"/>
+                </div>
+            </div>
+            <aura:set attribute="else">
+            <aura:if isTrue="{!v.content.SMPCNT__ContentDispLeft__c}">
+            <div class="form-group">
+                <div class="col-sm-12">
+                   <ui:outputRichText value="{!v.content.SMPCNT__ContentLeft__c}"/>
+                </div>
+            </div>
+            <aura:set attribute="else">
+            <aura:if isTrue="{!v.content.SMPCNT__ContentDispRight__c}">
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <ui:outputRichText value="{!v.content.SMPCNT__ContentRight__c}"/>
+                </div>
+            </div>
+            </aura:if>
+            </aura:set>
+            </aura:if>
+            </aura:set>
+            </aura:if>
+            </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

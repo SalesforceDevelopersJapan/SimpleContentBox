@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AuraDev</fullName>
+    <types>
+        <members>SimpleContent__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>SimpleContent__c-ja</members>
+        <name>CustomObjectTranslation</name>
+    </types>
+    <types>
+        <members>SimpleContentBoxController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>SimpleContentBoxControllerTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>SimpleContentBox</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>SimpleContentBox</members>
+        <name>StaticResource</name>
+    </types>
+    <version>33.0</version>
+</Package>

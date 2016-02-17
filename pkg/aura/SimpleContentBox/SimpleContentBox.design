@@ -1,0 +1,3 @@
+<design:component label="SimpleContentBox">
+    <design:attribute name="recordId" label="RecordId" description="Please specify the simple content ID registered to Salesforce." />
+</design:component>
