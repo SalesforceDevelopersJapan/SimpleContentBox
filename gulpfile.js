@@ -82,6 +82,7 @@ gulp.task('js', function() {
   .on('error', gutil.log.bind(gutil, 'Browserify Error'))
   .pipe(source(componentName + '.js'))
   .pipe(buffer())
+  .pipe(header(banner, { pkg : pkg } ))
   .pipe(gulp.dest('./build/js'));
 });
 

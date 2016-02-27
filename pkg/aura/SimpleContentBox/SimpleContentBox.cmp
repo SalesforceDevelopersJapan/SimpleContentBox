@@ -1,7 +1,7 @@
 <aura:component access="global" controller="SimpleContentBoxController" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
     <ltng:require styles="/resource/SimpleContentBox/css/bootstrap.css?__NOCACHE__" afterScriptsLoaded="{!c.doInit}"/>
     <aura:attribute name="recordId" type="String"/>
-    <aura:attribute name="content" type="SMPCNT__SimpleContent__c"/>
+    <aura:attribute name="content" type="SimpleContent__c"/>
     <div class="ui-widget simplecontentbootstrap center-block">
         <div class="form-horizontal center-block" style="max-width:90%">
             <aura:renderIf isTrue="{!v.recordId==''}">
@@ -13,29 +13,29 @@
                 </div>
             </div>
             </aura:renderIf>
-            <aura:if isTrue="{!v.content.SMPCNT__ContentDispNone__c}">
+            <aura:if isTrue="{!v.content.ContentDispNone__c}">
             <aura:set attribute="else">
-            <aura:if isTrue="{!v.content.SMPCNT__ContentDispAll__c}">
+            <aura:if isTrue="{!v.content.ContentDispAll__c}">
             <div class="form-group">
                 <div class="col-sm-6">
-                    <ui:outputRichText value="{!v.content.SMPCNT__ContentLeft__c}"/>
+                    <ui:outputRichText value="{!v.content.ContentLeft__c}"/>
                 </div>
                 <div class="col-sm-6">
-                    <ui:outputRichText value="{!v.content.SMPCNT__ContentRight__c}"/>
+                    <ui:outputRichText value="{!v.content.ContentRight__c}"/>
                 </div>
             </div>
             <aura:set attribute="else">
-            <aura:if isTrue="{!v.content.SMPCNT__ContentDispLeft__c}">
+            <aura:if isTrue="{!v.content.ContentDispLeft__c}">
             <div class="form-group">
                 <div class="col-sm-12">
-                   <ui:outputRichText value="{!v.content.SMPCNT__ContentLeft__c}"/>
+                   <ui:outputRichText value="{!v.content.ContentLeft__c}"/>
                 </div>
             </div>
             <aura:set attribute="else">
-            <aura:if isTrue="{!v.content.SMPCNT__ContentDispRight__c}">
+            <aura:if isTrue="{!v.content.ContentDispRight__c}">
             <div class="form-group">
                 <div class="col-sm-12">
-                    <ui:outputRichText value="{!v.content.SMPCNT__ContentRight__c}"/>
+                    <ui:outputRichText value="{!v.content.ContentRight__c}"/>
                 </div>
             </div>
             </aura:if>
